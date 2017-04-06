@@ -50,7 +50,7 @@ public class UnusedVariable {
 	}	
 	
     public String toString(){
-	    return("  "+this.line);
+	    return(""+this.line);
 	   }   
 	   
     /**
@@ -130,12 +130,12 @@ public class UnusedVariable {
      */   
     
     public void report( ){
-        System.out.println("Below are the list of unused variables and the line numbers which they are declared on");
-        System.out.println("Variable Name"+ "\t\t" + "Line Number");
+        System.out.println("Unused variables and the line numbers which they are declared on\n");
+        System.out.printf("%-30s%-30s\n","Variable Name","Line Number");
                 
         for (String key : unused_var_collection.keySet()) {                  
-                if ((unused_var_collection.get(key)).getCount()==1){                      
-                    System.out.println(key + "\t\t\t  "+unused_var_collection.get(key)); 
+                if ((unused_var_collection.get(key)).getCount()==1){                
+                   System.out.printf("%-30s%-30s\n",key,unused_var_collection.get(key));                   
                 }
         }
     }
