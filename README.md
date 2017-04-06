@@ -31,6 +31,7 @@ If you don’t have already installed, visit this links to install and configure
 ## Running the tests
 
 A step by step series of examples that tell you to run the program using command line
+This instruction applies for both Windows and MAC OS 
 
 1.	First, navigate to the directory contains the java files
 
