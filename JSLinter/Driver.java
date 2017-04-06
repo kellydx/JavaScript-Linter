@@ -20,7 +20,7 @@ public class Driver{
        
       try{
             //read the entire text into an arrayList
-            FileInputStream fstream = new FileInputStream("rainbow.txt");
+            FileInputStream fstream = new FileInputStream(args[0]);
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             String strLine;    
