@@ -1,6 +1,6 @@
 ﻿let doSomething = (){
 	let aVariable = null;
-
+	// aVariable never used
 }
 
 var rainbow;

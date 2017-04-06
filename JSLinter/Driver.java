@@ -28,9 +28,11 @@ public class Driver{
             FileInputStream fstream = new FileInputStream(args[0]);
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
-            String strLine;    
+            String strLine; 
+            IgnoreComment cmt = new IgnoreComment();
             int i=0;
             while ((strLine = br.readLine()) != null)   {
+                strLine = cmt.ignoreComments(strLine.trim());
                 txt.add(strLine.trim());           
             }       
             in.close();        
