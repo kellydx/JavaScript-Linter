@@ -100,7 +100,7 @@ class UndeclareFunction{
      * @return flg          : false mean the string doesn't contain the keyword
      */
     public boolean containsKey (String line ){
-        String [] keyword = {"var", "function", "if", "else", "else if", "let","set"};
+        String [] keyword = {"var", "function", "if", "else", "else if", "let","set","log"};
         boolean flag = false;
         for (int i=0; i<keyword.length; i++){
             if (line.contains(keyword[i]))
