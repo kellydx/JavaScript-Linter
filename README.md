@@ -1,4 +1,4 @@
-# Programming Challenge - Javascript Linter
+# Programming Challenge - JavaScript Linter
 
 This is a command line program using that accepts a command line argument the name of a JavaScript file. 
 The program has the following features:
