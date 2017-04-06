@@ -17,7 +17,12 @@ public class Driver{
    public static List<String> txt= new ArrayList<String>();    
     
     public static void main(String [] args)throws IOException {
-       
+      // if no file name is entered  
+      if (args.length < 1){
+			System.out.println("No filename found. Please enter an input file name ");		
+			return;
+      }
+		
       try{
             //read the entire text into an arrayList
             FileInputStream fstream = new FileInputStream(args[0]);
