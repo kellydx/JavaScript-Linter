@@ -6,14 +6,14 @@ The program has the following features:
 	1. Find declared variables that are not used in the code and report the name of 
 	the variable and the line number the variable is declared on.
 	
-	2. Find single line if/else statement that don’t have curly brackets and report 
+	2. Find single line if/else statements that don’t have curly brackets and report 
 	if it is an ‘if’ or an ‘else’ block and the line number the block is found.
 	
 	3. Locate function calls that have not been declared and report the name of the 
 	function and the line number that the function call happens on.
 	
 	4. Check if the text file has missing/ extra bracket.
-	if it is a missing bracket:
+	If it is a missing bracket:
        - Report the line number and the statement of the openning bracket
 	   - If ot is an extra bracket
        - Report the line number the extra bracket is on
@@ -47,11 +47,11 @@ Note: If you get the error "'javac' is not recognized as an internal or external
 operable program or batch file.", refers to this link to set up the environment
 (https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/)
 
-3. Finally, run your java program which ‘java’ command followed by your class name
+3. Finally, run your java program with ‘java’ command followed by your class name
 and an argument (the name of the js file in double quotation marks)
 
 ```
-C:\Programming-Challenge\JSLinter> java Driver "rainbow.js"
+C:\Programming-Challenge\JSLinter> java Driver "simpleSample.js"
 ```
 
 ## Built With
