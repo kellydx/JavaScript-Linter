@@ -89,9 +89,9 @@ public class IfElseStatements{
     * @List<Integer> bracket_missing_else   : arrayList holds the line numbers of else statement without brackets
     */
    public void report (){
-        System.out.println("Below are if/else statement that don't have curly bracket ");
-        System.out.println("If statements on lines:  "+bracket_missing_if);        
-        System.out.println("Else statements on lines:  "+bracket_missing_else);
+        System.out.println("\n ------ if/else statement without curly brackets ------ \n");
+        System.out.println("if statements on lines:  "+bracket_missing_if);        
+        System.out.println("else statements on lines:  "+bracket_missing_else);
    }      
 }
 

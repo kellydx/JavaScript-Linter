@@ -80,8 +80,7 @@ class UndeclareFunction{
            Matcher m2 = r2.matcher(txt.get(j));           
            Matcher m3 = r3.matcher(txt.get(j));          
            boolean flg = containsKey(txt.get(j));
-           if (m2.find()&& !flg ){
-                System.out.println(txt.get(j));
+           if (m2.find()&& !flg ){                
                 funcName = m2.group().split("\\(")[0].trim();                 
                 funcCall.put(funcName,j+1);
            } 
@@ -126,10 +125,10 @@ class UndeclareFunction{
            funcCall.remove(declaredFunction.get(i));
         }       
         
-       System.out.println("Below are the list of functions calls that has not been declared \nand the line numbers which they are declared on");
-       System.out.println("Function Name"+ "\t\t\t\t" + "Line Number");
-       for (String key : funcCall.keySet()) {
-           System.out.println(key + "\t\t\t\t\t  "+funcCall.get(key));            
+       System.out.println("\n ------- Undeclared Function Calls ------\n");
+       System.out.printf("%-30s%-30s\n","Function Name","Line Number");
+       for (String key : funcCall.keySet()) {            
+           System.out.printf("%-30s%-30s\n",key,funcCall.get(key));
        }
     }
 }

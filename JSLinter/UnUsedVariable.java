@@ -130,7 +130,7 @@ public class UnusedVariable {
      */   
     
     public void report( ){
-        System.out.println("Unused variables and the line numbers which they are declared on\n");
+        System.out.println("------ Declared but Unused variables report ------\n");
         System.out.printf("%-30s%-30s\n","Variable Name","Line Number");
                 
         for (String key : unused_var_collection.keySet()) {                  

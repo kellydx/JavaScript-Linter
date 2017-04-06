@@ -1,13 +1,20 @@
 import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
-import java.util.Formatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This is the driver to test the following methods
+ * 
+ *          findUnusedVar           : find declared but unused variables
+ *          findSingleIfELse        : find conditional statements with curly brackets   
+ *          findUndeclaredFunction  : find underclared function call
+ *          findBracket             : find missing/ extra curly bracket and report line number
+ */
 public class Driver{    
     
-    public static List<String> txt= new ArrayList<String>();    
+   public static List<String> txt= new ArrayList<String>();    
     
     public static void main(String [] args)throws IOException {
        
@@ -29,6 +36,7 @@ public class Driver{
             findUnusedVar(txt);
             findSingleIfELse(txt);        
             findUndeclaredFunction(txt);
+            System.out.println("\n------ Missing/ extra curly brackets Report ------\n");
             findBracket();
         
    }
