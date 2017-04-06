@@ -37,7 +37,9 @@ class UndeclareFunction{
      */
     public void functionList (){
             String funcName;
+            //match: function funcName() {...}
             String pattern_func1 = "function\\s{0,}([a-zA-Z_$][a-zA-Z0-9_$]*)\\s{0,}\\(\\s{0,}\\S*?\\s{0,}\\).*";
+            //let/var = function() {...}
             String pattern_func2 ="(let|var)\\s{0,}([a-zA-Z$_][a-zA-Z0-9$_]*)\\s{0,}\\=\\s{0,}(function)\\s{0,}\\((\\s{0,}\\S*?\\s{0,})\\).*";
             Pattern r = Pattern.compile(pattern_func1);
             Pattern r1 = Pattern.compile(pattern_func1);       
@@ -70,8 +72,10 @@ class UndeclareFunction{
      *     
      */
     public void functionCall (){
-        String funcName;        
-        String pattern_func_call1 = "([a-zA-Z_$][a-zA-Z0-9_$]{1,}\\s{0,}[\\(]{1,}[\\s]{0,}\\S*?[\\s]{0,}[\\)])";       
+        String funcName;    
+        //match: doSomething(..);
+        String pattern_func_call1 = "([a-zA-Z_$][a-zA-Z0-9_$]{1,}\\s{0,}\\({1,}\\s{0,}\\S*?\\s{0,}\\))";      
+        //mustange.getEngineType() {...}
         String pattern_func_call2 = "\\s{0,}[a-zA-Z_$][a-zA-Z0-9_$]{1,}.[a-zA-Z_$][a-zA-Z0-9_$]{1,}\\s{0,}\\(\\s{0,}\\S*?\\s{0,}\\).*";
         Pattern r2 = Pattern.compile(pattern_func_call1);
         Pattern r3 = Pattern.compile(pattern_func_call2);      
@@ -100,7 +104,7 @@ class UndeclareFunction{
      * @return flg          : false mean the string doesn't contain the keyword
      */
     public boolean containsKey (String line ){
-        String [] keyword = {"var", "function", "if", "else", "else if", "let","set","log"};
+        String [] keyword = {"var", "function", "if", "else", "else if", "let","set","console.log"};
         boolean flag = false;
         for (int i=0; i<keyword.length; i++){
             if (line.contains(keyword[i]))
