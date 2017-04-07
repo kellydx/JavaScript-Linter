@@ -19,9 +19,9 @@ import java.util.regex.Pattern;
 
 public class UnusedVariable {
     //pattern let/var varName = value;
-    Pattern r = Pattern.compile("(let|var)(.*?)\\=(.*?)\\;");
+    Pattern r = Pattern.compile("(let|var)\\s{0,}([a-zA-Z$_][a-zA-Z0-9$_]*)\\s{0,}\\=.*\\;");
     //pattern let/var varName;
-    Pattern r1 = Pattern.compile("(let|var)(.*?)\\;");               
+    Pattern r1 = Pattern.compile("(let|var)\\s{0,}[a-zA-Z$_][a-zA-Z0-9$_].*\\s{0,}\\;");               
     List<String> txt = new ArrayList<String>();
     ArrayList<String> declaredVar= new ArrayList<String>();
     HashMap <String, UnusedVariable> unused_var_collection = new HashMap<String, UnusedVariable>(); 
@@ -61,7 +61,8 @@ public class UnusedVariable {
      *  @ ArrayList<String> declaredVar        :   list of the declared variables
      */
     public void declaredVar (){        
-        String varName="";     
+        String varName=""; 
+        
         for (int i = 0; i < txt.size(); i++){      
             //pattern let/var varName = value;
             Matcher m = r.matcher(txt.get(i));
