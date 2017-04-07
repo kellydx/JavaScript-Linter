@@ -2,7 +2,10 @@
 	let aVariable = null;
 	// aVariable never used
 }
-
+var 12 = number;
+let  = 7;
+let = 7;
+	
 var rainbow;
 
 var iceCream;
@@ -35,7 +38,6 @@ class Car{
 }
 
 
-	
 
 	
 	
